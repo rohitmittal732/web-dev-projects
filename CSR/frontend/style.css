@@ -1,0 +1,19 @@
+.container{
+    margin:auto;
+    margin-top: auto;
+    width:25vw;
+    height:auto;
+    text-align:center;
+    background-color: cyan;
+    box-shadow: 5px 6px 4px grey;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    gap:20px;
+    margin:20px;
+    padding:20px;
+}
+
