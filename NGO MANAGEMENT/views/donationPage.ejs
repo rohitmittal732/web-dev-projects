@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style1.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="set">
+            <div class="fit"><img src="https://thumbs.dreamstime.com/b/print-288782922.jpg"></div>
+        <h2>Helping Hands NGO</h2></div>
+        <div class="pass"><a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Campaigns</a>
+        <a href="#">Events</a>
+        <a href="#">Contacts</a></div>
+
+        <div class="end"><button class="btn1"  onClick='window.location.href="/login/form"'>Login</button>
+        <button class="btn2" onClick='window.location.href="/donate/form"'>Donate Now</button></div>
+    </nav>
+    <div class="base">
+      <div>
+         <div class="form-card">
+        <h2><b>Secure Donation form</b></h2>
+        <p>Please fill in your details to support our cause.</p>
+        <form action="/donate/form" method="POST">
+  <div class="flat">
+    <div class="mb-3">
+    <label  class="form-label" >Donor Name</label>
+    <input type="text" class="form-control" placeholder="John Doe" name="donorName" required>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label" required>Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@gmail.com" name="email" required>
+  </div>
+  </div>
+  <div class="flat">
+     <div class="mb-3">
+    <label  class="form-label">Phone Number</label>
+    <input type="tel" class="form-control" placeholder="123-456-7890" pattern="[0-9]{10}" name="phone" required>
+  </div>
+  <div class="mb-3">
+  <label  class="form-label">Select Campaign</label>
+  <select class="form-select" id="Campaign" name="campaign" required>
+    <option value="Class Water Initiative">Class Water Initiative</option>
+    <option value="Education for all">Education for all</option>
+    <option value="Emergency Hunger Relief">Emergency Hunger Relief</option>
+    <option value="Healthcare Access">Healthcare Access</option>
+   
+  </select>
+</div>
+  </div>
+  <div class="amount">
+    <label class="form-label">Donation Amount($)</label>
+    <div class="boxes">
+        <div class="boxZ" data-amount="25">$25</div>
+        <div class="boxZ" data-amount="50">$50</div>
+        <div class="boxZ" data-amount="100">$100</div>
+        <div class="boxZ" data-amount="500">$500</div>
+    </div>
+    <input type="number" class="form-control" placeholder="Enter custom amount" id="donationInput" name="amount">
+  </div>
+  <div class="mb-3">
+  <label  class="form-label">Payment Method</label>
+  <select class="form-select" id="Payment" name="paymentMethod" required>
+    <option value="Credit/Debit Card">Credit/Debit Card</option>
+    <option value="Bank transfer">Bank transfer</option>
+    <option value="PayPal">PayPal
+    </option>
+    <option value="Crypto Wallet">Crypto Wallet</option>
+   
+  </select>
+</div>
+
+   <div class="mb-3">
+    <label  class="form-label" >Message(Optional)</label>
+    <textarea  class="form-control" placeholder="Leave a message for support..." name="message"></textarea>
+  </div>
+   
+
+  <button type="submit" class="btn btn-primary" id="btn6">Donate Now</button>
+  
+</form>
+    </div>
+    </div>
+    <div class="myContent">
+        <div class="hero">
+  <img 
+    class="w-full h-auto object-contain" 
+    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt-7dh1gf_rlPoTf4xL5BQ739YCJiSXtISygMO9kKRNhZSoBZ9F4Ddj6G-55H7nONP5YQUCBDfNn43feIvqm7_jJvfEQBMLd681a9oWIWxePVQqi6TvrlHXHc6vbyVOw80AWhYZXTb1e_DjFBdqN5XQkD0l3myZ-czahHNVIWjxEvd-FZIrRu8HV5Jk76-Nj0vYKViMdyMyJ7SUmBsM7L3kKhz29EPDSMp2cLkUHvtUxs0GpOJ99Jdvg" 
+    alt="Volunteers distributing food and supplies"
+  >
+</div>
+</div>
+    </div>
+    <div class="footer">
+  <div class="contact">
+    <h2>Helping Hands NGO</h2>
+    <p>Dedicated to creating sustainable impact <br>
+       through community empowerment and <br>
+       focused social initiatives.</p>
+  </div>
+
+  <div class="contact">
+    <p>Quick Links</p>
+    <a href="#">About</a>
+    <a href="#">Campaigns</a>
+    <a href="#">Events</a>
+    <a href="#">Contacts</a>
+  </div>
+
+  <div class="contact">
+    <p>Support</p>
+    <a href="#">Donate Now</a>
+    <a href="#">Login</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact us</a>
+  </div>
+
+  <div class="contact">
+    <p>Contact us</p>
+    <div class="pack">
+      <i class="fa-regular fa-message"></i>
+      <a href="#">info@helpinghandsngo.org</a>
+    </div>
+    <div class="pack">
+      <i class="material-icons">call</i>
+      <a href="#">+91 9231342131</a>
+    </div>
+    <div class="pack">
+      <i class="material-icons">location_on</i>
+      <a href="#">123 Social Ave, Community City, 400001</a>
+    </div>
+  </div>
+</div>
+
+    <script>
+        const boxes = document.querySelectorAll(".boxZ");
+const donationInput = document.getElementById("donationInput");
+
+boxes.forEach(box => {
+  box.addEventListener("click", () => {
+    boxes.forEach(b => b.classList.remove("active"));
+    box.classList.add("active");
+    donationInput.value = box.dataset.amount;
+  });
+});
+
+donationInput.addEventListener("input", () => {
+  boxes.forEach(b => b.classList.remove("active"));
+});
+</script>
+</body>
+</html>

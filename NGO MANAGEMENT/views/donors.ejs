@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donors</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+  <nav class="Navbar">
+        <h2>Helping Hands NGO</h2>
+       <div class="pass">
+         <a href="/admin">Dashboard</a>
+         <a href="/donors">Donors</a>
+        <a href="/volunteers">Volunteers</a>
+        <a href="/campaigns">Campaigns</a>
+        <a href="/events">Events</a>
+       </div>
+        <div class="end">
+        
+        <i class="material-icons">logout</i>
+        </div>
+    </nav>
+
+  <div class="section">
+
+    <div class="head">
+        <div>
+            <h2>Manage Donors</h2>
+            <p>View and manage all registered donors.</p>
+        </div>
+
+        <a href="/donor/new" class="btn btn-primary">
+            Add Donor
+        </a>
+    </div>
+
+    <div class="table-responsive mt-4">
+
+        <table class="table table-bordered table-hover align-middle">
+
+            <thead class="table-primary">
+
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Campaign</th>
+                    <th>Amount</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <% donors.forEach((donor)=>{ %>
+
+                <tr>
+
+                    <td><%= donor.name %></td>
+
+                    <td><%= donor.email || "N/A" %></td>
+
+                    <td><%= donor.phone %></td>
+
+                    <td><%= donor.campaign || "N/A" %></td>
+
+                    <td>₹ <%= donor.amount %></td>
+
+                    <td>
+
+                        <a href="/donor/edit/<%= donor._id %>" class="btn btn-sm btn-warning">
+                            Edit
+                        </a>
+
+                        <form action="/donor/delete/<%= donor._id %>?_method=DELETE"
+                              method="POST"
+                              class="d-inline">
+
+                            <button class="btn btn-sm btn-danger">
+                                Delete
+                            </button>
+
+                        </form>
+
+                    </td>
+
+                </tr>
+
+                <% }) %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <% if(donors.length===0){ %>
+
+        <div class="alert alert-info mt-4">
+            No Donors Found.
+        </div>
+
+    <% } %>
+
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

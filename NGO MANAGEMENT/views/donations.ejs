@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donations</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">NGO Management</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/volunteers">Volunteers</a></li>
+          <li class="nav-item"><a class="nav-link" href="/donors">Donors</a></li>
+          <li class="nav-item"><a class="nav-link" href="/campaigns">Campaigns</a></li>
+          <li class="nav-item"><a class="nav-link" href="/donations">Donations</a></li>
+          <li class="nav-item"><a class="nav-link" href="/reports">Reports</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="d-flex align-items-center justify-content-between">
+      <h2>Donations</h2>
+      <a class="btn btn-primary" href="/donation/new">Add Donation</a>
+    </div>
+
+    <div class="table-responsive mt-3">
+      <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th>Id</th>
+            <th>Donor Name</th>
+            <th>Campaign</th>
+            <th>Amount</th>
+            <th style="width: 180px;">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let i = 0; i < donations.length; i++) { %>
+            <tr>
+              <td><%= donations[i].id %></td>
+              <td><%= donations[i].donorName %></td>
+              <td><%= donations[i].campaign %></td>
+              <td><%= donations[i].amount %></td>
+              <td>
+                <form class="d-inline" action="/donation/delete/<%= donations[i].id %>?_method=DELETE" method="POST">
+                  <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                </form>
+              </td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+
+    <% if (donations.length === 0) { %>
+      <div class="alert alert-info mt-3">No donations added yet.</div>
+    <% } %>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

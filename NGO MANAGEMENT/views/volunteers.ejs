@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/style2.css">
+</head>
+<body>
+   <nav class="Navbar">
+        <h2>Helping Hands NGO</h2>
+       <div class="pass">
+         <a href="/admin">Dashboard</a>
+         <a href="/donors">Donors</a>
+        <a href="/volunteers">Volunteers</a>
+        <a href="/campaigns">Campaigns</a>
+        <a href="/events">Events</a>
+       </div>
+        <div class="end">
+        
+        <i class="material-icons" onclick="window.location.href='/'">logout</i>
+        </div>
+    </nav>
+
+  <!-- <div class="container mt-4">
+    <div class="d-flex align-items-center justify-content-between">
+      <h2>Volunteers</h2>
+      <a class="btn btn-primary" href="/volunteer/new">Add Volunteer</a>
+    </div> -->
+
+    <div class="section">
+
+    <div class="head">
+        <div>
+            <h2>Manage Volunteers</h2>
+            <p>View, edit and manage all registered volunteers.</p>
+        </div>
+
+        <a href="/volunteer/new" class="btn btn-primary">
+            Add Volunteer
+        </a>
+    </div>
+
+    <div class="table-responsive mt-4">
+
+        <table class="table table-bordered table-hover align-middle">
+
+            <thead class="table-primary">
+
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>City</th>
+                    <th>Skill</th>
+                    <th>Availability</th>
+                    <th>Actions</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <% volunteers.forEach((volunteer)=>{ %>
+
+                <tr>
+
+                    <td><%= volunteer.fullname %></td>
+
+                    <td><%= volunteer.phone %></td>
+
+                    <td><%= volunteer.city %></td>
+
+                    <td><%= volunteer.skill %></td>
+
+                    <td><%= volunteer.availability %></td>
+
+                    <td>
+
+                        <a href="/volunteer/edit/<%= volunteer._id %>" class="btn btn-sm btn-warning">
+                            Edit
+                        </a>
+
+                        <form action="/volunteer/delete/<%= volunteer._id %>?_method=DELETE"
+                              method="POST"
+                              class="d-inline">
+
+                            <button class="btn btn-sm btn-danger">
+                                Delete
+                            </button>
+
+                        </form>
+
+                    </td>
+
+                </tr>
+
+                <% }) %>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <% if(volunteers.length===0){ %>
+
+        <div class="alert alert-info mt-4">
+            No Volunteers Found.
+        </div>
+
+    <% } %>
+
+</div>
+
+    <% if (volunteers.length === 0) { %>
+      <div class="alert alert-info mt-3">No volunteers added yet.</div>
+    <% } %>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

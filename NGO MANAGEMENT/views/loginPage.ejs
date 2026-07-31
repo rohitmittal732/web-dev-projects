@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style1.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <nav class="top-navbar">
+        <h2> Helping Hands NGO</h2>
+       <div class="items">
+         <a href="#">Home</a>
+        <a href="#">Campaigns</a>
+        <a href="#">About</a>
+        <button onclick="window.location.href='/donate/form'">Donate Now</button>
+       </div>
+    </nav>
+    
+    <div class="base">
+        <div class="form-card">
+        <h1>Welcome Back</h1>
+        <p>Login to continue supporting our mission and access your dashboard.</p>
+        <form action="/login/form" method="POST">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@gmail.com" name="email">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="********" name="password">
+  </div>
+   <div class="mb-3">
+  <label for="loginAs" class="form-label">Login As</label>
+  <select class="form-control" id="loginAs" name="role">
+    <option value="">-- Select Role --</option>
+    <option value="admin">Admin</option>
+    <option value="volunteer">Volunteer</option>
+    <option value="donor">Donor</option>
+   
+  </select>
+</div>
+
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+  <div class="signUp">
+    <p>Don't have an account?</p>
+  <a href="/register">Register</a>
+  </div>
+</form>
+    </div>
+    <div class="myContent">
+        <div class="hero">
+  <img 
+    class="w-full h-auto object-contain" 
+    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt-7dh1gf_rlPoTf4xL5BQ739YCJiSXtISygMO9kKRNhZSoBZ9F4Ddj6G-55H7nONP5YQUCBDfNn43feIvqm7_jJvfEQBMLd681a9oWIWxePVQqi6TvrlHXHc6vbyVOw80AWhYZXTb1e_DjFBdqN5XQkD0l3myZ-czahHNVIWjxEvd-FZIrRu8HV5Jk76-Nj0vYKViMdyMyJ7SUmBsM7L3kKhz29EPDSMp2cLkUHvtUxs0GpOJ99Jdvg" 
+    alt="Volunteers distributing food and supplies"
+  >
+</div>
+<h1>Making a difference</h1>
+<p>Your contribution helps us reach thousands of <br>lives every day. Join our community of change-<br>makers.</p>
+
+    </div>
+    </div>
+    <div class="footer">
+  <div class="contact">
+    <h2>Helping Hands NGO</h2>
+    <p>Dedicated to creating sustainable impact <br>
+       through community empowerment and <br>
+       focused social initiatives.</p>
+  </div>
+
+  <div class="contact">
+    <p>Quick Links</p>
+    <a href="#">About</a>
+    <a href="#">Campaigns</a>
+    <a href="#">Events</a>
+    <a href="#">Contacts</a>
+  </div>
+
+  <div class="contact">
+    <p>Support</p>
+    <a href="#">Donate Now</a>
+    <a href="#">Login</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Contact us</a>
+  </div>
+
+  <div class="contact">
+    <p>Contact us</p>
+    <div class="pack">
+      <i class="fa-regular fa-message"></i>
+      <a href="#">info@helpinghandsngo.org</a>
+    </div>
+    <div class="pack">
+      <i class="material-icons">call</i>
+      <a href="#">+91 9231342131</a>
+    </div>
+    <div class="pack">
+      <i class="material-icons">location_on</i>
+      <a href="#">123 Social Ave, Community City, 400001</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
